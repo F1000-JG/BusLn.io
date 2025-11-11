@@ -20,5 +20,5 @@ app.use("/api", busRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚍 Bus Pay System PRO - backend running on http://localhost:${PORT}`);
+  console.log(`Lightning bus- backend running on http://localhost:${PORT}`);
 });
