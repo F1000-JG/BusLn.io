@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Pay PRO - Panel del Chofer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🚌 Bus Pay System PRO</h1>
+      <p>Panel del Chofer • Control Inteligente de Pagos</p>
+    </header>
+
+    <main class="dashboard">
+      <section class="card">
+        <h2>💰 Generar Cobro</h2>
+        <div class="input-group">
+          <input id="amount" type="number" placeholder="Monto en satoshis">
+          <input id="memo" type="text" placeholder="Descripción del viaje">
+          <button id="btnGenerate">Generar QR</button>
+        </div>
+        <div id="qrContainer" class="qr-section">
+          <canvas id="qrCanvas"></canvas>
+          <p id="invoiceText"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>🧾 Últimos Pagos</h2>
+        <button id="btnRefresh">Actualizar</button>
+        <ul id="paymentList"></ul>
+      </section>
+
+      <section class="card wide">
+        <h2>📊 Ingresos Recientes</h2>
+        <canvas id="earningsChart"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <p>🚀 Desarrollado por <strong>Adriana Iglesias Flores</strong> | 2025</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
